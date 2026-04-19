@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    /* =================== COLOR VARIABLES =================== */
+    --color-first-color: hsl(45, 100%, 50%);
+    --color-first-color-alt: hsl(45, 100%, 48%);
+    --color-first-color-light: hsl(45, 100%, 88%);
+    --color-gradient-color: linear-gradient(180deg, hsl(45, 100%, 65%) 0%, hsl(45, 100%, 45%) 100%);
+    --color-title-color: hsl(45, 4%, 8%);
+    --color-text-color: hsl(45, 4%, 40%);
+    --color-text-color-light: hsl(45, 4%, 60%);
+    --color-white-color: hsl(45, 80%, 98%);
+    --color-dark-color: hsl(45, 4%, 8%);
+    --color-body-color: hsl(45, 100%, 96%);
+    --color-container-color: hsl(45, 100%, 99%);
+
+    /* =================== FONT & TYPOGRAPHY =================== */
+    --font-body-font: "Montserrat", sans-serif;
+
+    /* =================== CUSTOM BREAKPOINT =================== */
+    --breakpoint-xs1: 350px;
+    --breakpoint-xs2: 540px;
+    --breakpoint-lg2: 1150px;
+}
+
+@layer base {
+    * {
+        @apply box-border p-0 m-0;
+    }
+
+    html {
+        @apply scroll-smooth;
+    }
+
+    body,
+    button,
+    input {
+        @apply font-body-font;
+    }
+
+    body {
+        @apply bg-body-color text-text-color transition-colors duration-300;
+    }
+
+    input,
+    button {
+        @apply border-none outline-none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply text-title-color;
+    }
+
+    main {
+        @apply overflow-hidden;
+    }
+
+    section {
+        @apply w-full px-8 pt-24 pb-20;
+    }
+
+    header{
+        @apply w-full px-8 h-14 lg:h-22;
+    }
+
+    ul {
+        @apply list-none;
+    }
+
+    a {
+        @apply no-underline;
+    }
+
+    img {
+        @apply block max-w-full h-auto;
+    }
+
+}
+
+@layer utilities {
+
+    /* ================ SMALL REUSABLE CLASSES ================== */
+    .container {
+        @apply mx-auto max-w-7xl;
+    }
+
+    .section__title,
+    .section__subtitle {
+        @apply text-center;
+    }
+
+    .section__title {
+        @apply text-3xl mb-8 lg:text-5xl lg:mb-16;
+    }
+
+    .section__subtitle {
+        /* font-size: var(--normal-font-size);
+        color: var(--first-color);
+        margin-bottom: .25rem; */
+        @apply text-lg text-first-color mb-[.25rem] lg:text-2xl lg:mb-6;
+    }
+
+    /* ================ NAV REUSABLE CLASSES ================== */
+
+    .nav_menu .nav_link {
+        @apply text-title-color font-semibold hover:text-first-color transition-colors duration-400;
+    }
+
+    /* ================ HOME SECTION REUSABLE CLASSES ================== */
+
+    .social_link i{
+        @apply grid justify-center items-center size-10 text-2xl text-black bg-white rounded-lg shadow-lg transition-all duration-400 hover:bg-first-color hover:shadow-first-color-alt lg:size-13 lg:text-3xl;
+    }
+
+    /* ================ SERVICES SECTION REUSABLE CLASSES ================== */
+
+    .service_card{
+        @apply text-center;
+    }
+
+    .service_img{
+        @apply w-[150px] justify-self-center mb-5 lg:w-[200px];
+    }
+
+    .service_title{
+        @apply text-xl font-semibold mb-3 lg:text-2xl;
+    }
+
+} 
