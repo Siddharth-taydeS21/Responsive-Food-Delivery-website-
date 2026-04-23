@@ -20,7 +20,7 @@
     <title>Responsive delivery website | Siddharth Tyade</title>
 </head>
 
-<body>
+<body class="2k:[zoom:1.4]">
     <!--=============== HEADER ===============-->
     <header class="header bg-body-color fixed top-0 left-0 flex transition-all duration-400 z-10" id="header">
         <nav class="nav container relative w-full flex justify-between items-center">
@@ -82,7 +82,7 @@
                             home-delivered food, delivered quickly and without delay.
                         </p>
                         <a href="#menu"
-                            class="button inline-flex bg-first-color text-white-color p-[.8rem_2rem] rounded-xl font-semibold shadow-lg drop-shadow-first-color-alt transition-colors duration-300 hover:bg-first-color-alt lg:mb-8 xl:text-2xl">Order
+                            class="home_button inline-flex bg-first-color text-white-color p-[.8rem_2rem] rounded-xl font-semibold shadow-lg drop-shadow-first-color-alt transition-colors duration-300 hover:bg-first-color-alt lg:mb-8 xl:text-xl">Order
                             Now</a>
                     </div>
 
@@ -117,13 +117,14 @@
                         </div>
 
                         <address class="home_number">
-                            <span class=" not-italic text-title-color text-[12px] lg:text-[18px] xl:text-2xl">Phone number:</span>
+                            <span class=" not-italic text-title-color text-[12px] lg:text-[18px] xl:text-xl">Phone
+                                number:</span>
                             <span
-                                class="not-italic font-semibold text-title-color block text-[12px] lg:text-[18px] xl:text-2xl">+321(00)123-45-67</span>
+                                class="not-italic font-semibold text-title-color block text-[12px] lg:text-[18px] xl:text-xl">+321(00)123-45-67</span>
                         </address>
                     </div>
                     <p
-                        class="home_comment absolute text-[12px] w-[210px] bg-white p-6 rounded-2xl font-semibold right-0 -bottom-2 shadow-2xl/50 lg:text-[15px] lg:w-[250px] lg:-bottom-12 xl:text-2xl xl:w-[320px]">
+                        class="home_comment absolute text-[12px] w-[210px] bg-white p-6 rounded-2xl font-semibold right-0 -bottom-2 shadow-2xl/50 lg:text-[15px] lg:w-[250px] lg:-bottom-12 xl:text-xl xl:w-[320px]">
                         Fast delivery and friendly staff. The food was good
                         and very tasty 10/10.
                     </p>
@@ -309,7 +310,8 @@
 
         <!--==================== REVIEW SECTION ====================-->
         <section class="reviews" id="reviews">
-            <div class="reviews_container container grid justify-center gap-y-24 xs1:grid-cols-[380px] xs2:grid-cols-[400px] lg:grid-cols-2 gap-x-12 lg:pt-24">
+            <div
+                class="reviews_container container grid justify-center gap-y-24 xs1:grid-cols-[380px] xs2:grid-cols-[400px] lg:grid-cols-2 gap-x-12 lg:pt-24">
                 <div class="reviews_content grid justify-self-center lg:items-center">
                     <div>
                         <h2 class="section__subtitle lg:text-start!">OUR REVIEWS</h2>
@@ -415,17 +417,196 @@
                     </div>
                 </div>
 
-                <div class="reviews_image justify-self-center relative h-[320px] w-[320px] max-w-[320px] xs2:max-w-full rounded-[30%] bg-first-color lg:-order-1 lg:size-full xl:h-[580px]">
+                <div
+                    class="reviews_image justify-self-center relative h-[320px] w-[320px] max-w-[320px] xs2:max-w-full rounded-[30%] bg-first-color lg:-order-1 lg:size-full xl:h-[580px]">
                     <img src="./assets/Imeges/review-img.png" alt="image"
                         class="w-[270px] absolute mx-auto bottom-0 right-0 left-8 mask-b-from-80% mask-b-to-100% lg:w-[400px] xl:w-[470px]">
                 </div>
             </div>
         </section>
 
+        <!--==================== APP SECTION ====================-->
+        <section class="app" id="app">
+            <div
+                class="app_container container  mt-12! grid gap-y-12 justify-evenly bg-first-color-light rounded-[3rem] p-[3rem_1rem_0] overflow-hidden xs2:w-[400px] xs2:mx-auto lg:w-[initial] lg:grid-cols-[420px_320px] lg:gap-x-24 lg:pt-15 lg:px-15">
+                <div class="app_data text-center lg:text-start">
+                    <h3 class="section__subtitle mb-2! lg:text-start! lg:mb-4!">OUR APP</h3>
+
+                    <h2 class="section__title lg:text-start! lg:mb-4!">Simple Way To <br> Order Your Food</h2>
+
+                    <p class="section_discription mb-10 lg:mb-20">Discover restaurants and food anywhere, anytime, and
+                        have your order delivered to your door quickly.</p>
+
+                    <a href=""
+                        class="button bg-first-color p-[1rem_2rem] rounded-2xl text-md text-white font-bold shadow-lg transition-all duration-300 hover:bg-first-color-alt">Get
+                        The App</a>
+                </div>
+
+                <div
+                    class="app_image w-[250px] h-[310px] justify-self-center! overflow-hidden shadow-lg max-xs1:w-full lg:w-[350px] lg:h-[400px]">
+                    <img src="./assets/Imeges/app-img.png" alt="img" class="app_img rounded-3xl lg:mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!--==================== MAP SECTION ====================-->
+        <section class="map" id="map">
+            <h2 class="section__subtitle lg:mt-12">OUR LOCATION</h2>
+            <h2 class="section__title">Find Us On The Map</h2>
+
+            <div class="map_container container grid gap-y-8 pb-12 lg:grid-cols-[450px_330px] lg:justify-center items-center lg:gap-x-20">
+                <div class="map_area">
+                    <img src="./assets/Imeges/map-img.png" alt="image" class="map_img absolute w-full h-full object-cover object-center top-0 left-0 transition-transform duration-500">
+
+                    <!-- ======== GOOGLE MAP LOCATION ======= -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249744.0447439767!2d-77.15259168805464!3d-12.026254169170906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima%2C%20Peru!5e0!3m2!1sen!2sin!4v1776934915178!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="map_content grid h-[300px] gap-8 justify-center items-center text-center lg:grid-cols-[repeat(2,max-content)]">
+                    <div class="map_card">
+                        <h3 class="map_title">
+                            <i class="ri-map-pin-2-fill"></i>
+                            Location
+                        </h3>
+
+                        <address class="map_info">
+                            Lima - Sun City - Peru <br> Av. Moon #4321
+                        </address>
+                    </div>
+
+                    <div class="map_card">
+                        <h3 class="map_title">
+                            <i class="ri-calendar-schedule-fill"></i>
+                            Schedule
+                        </h3>
+
+                        <address class="map_info">
+                            Monday - Sunday <br> 24/7
+                        </address>
+                    </div>
+
+                    <div class="map_card">
+                        <h3 class="map_title">
+                            <i class="ri-phone-fill"></i>
+                            Phones
+                        </h3>
+
+                        <address class="map_info">
+                            +321(00)123-45-67 <br> +11-1234567
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!--==================== FOOTER ====================-->
+    <footer class="footer w-full p-8 bg-first-color-light">
+        <div class="footer_container container grid gap-y-14 pt-12 pb-20 xs2:grid-cols-[400px] md:grid-cols-[initial] lg:grid-cols-[repeat(2,max-content)] lg:justify-between">
+            <div class="footer_data">
+                <div class="footer_info grid mb-4">
+                    <a href="#" class="nav_logo flex items-center gap-1 mb-4">
+                        <i class="ri-bowl-fill text-title-color"></i><span
+                            class="font-bold text-first-color">Food Lover</span>
+                    </a>
+
+                    <p class="footer_discription">
+                        We will fill your tummy with <br> delicious food with fast delivery.
+                    </p>
+                </div>
+
+                <div class="footer_socials flex gap-x-3">
+                    <a href="#" target="_blank" class="social_link">
+                        <i class="ri-facebook-circle-fill"></i>
+                    </a>
+
+                    <a href="#" target="_blank" class="social_link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+
+                    <a href="#" target="_blank" class="social_link">
+                        <i class="ri-twitter-x-line"></i>
+                    </a>
+
+                    <a href="#" target="_blank" class="social_link">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer_content grid grid-cols-2 gap-12 md:grid-cols-[repeat(3,max-content)] md:justify-between xl:gap-x-26">
+                <div>
+                    <h3 class="footer_title">Company</h3>
+
+                    <ul class="footer_links">
+                        <li>
+                            <a href="#" class="footer_link">Why Food?</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer_link">Partner with us</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer_link">About us</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer_link">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer_title">Support</h3>
+
+                    <ul class="footer_links">
+                        <li>
+                            <a href="#" class="footer_link">Account</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer_link">Support center</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer_link">Support center</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer_link">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer_newsLatter max-xs2:col-span-2 xl:w-[350px]">
+                    <h3 class="footer_title">Stay Connected</h3>
+
+                    <p class="transition-colors duration-300 hover:text-title-color text-sm">
+                        Questions or feedback? we'd <br> love to hear from you.
+                    </p>
+
+                    <form action="" class="footer_form mt-8 bg-white w-full flex p-3 rounded-md shadow-lg xs2:w-[300px] xl:w-[350px]">
+                        <input type="email" class="fotter_input w-full bg-transparent pl-2 text-title-color" placeholder="Email address">
+
+                        <button class="fotter_button size-[35px] bg-first-color rounded-md text-white text-xl font-bold shadow-md transition-colors hover:bg-first-color-alt cursor-pointer">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <span class="footer_copy text-xs block text-center">&#169; All Rights Reserved By Siddharth the Dev</span>
+    </footer>
+
     <!--=============== SCROLLREVEAL ===============-->
-    <!-- <script src=""></script> -->
+    <a href="#home" class="scrollUp fixed -bottom-full right-8 lg:right-12 flex justify-center items-center size-[40px] p-3 bg-white text-black rounded-md text-xl font-bold shadow-lg transition-all duration-500 hover:-translate-y-4">
+        <i class="ri-arrow-up-fill"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="./assets/JS/scrollreveal.min.js"></script>
 
     <!--=============== SWIPER JS ===============-->
     <script src="./assets/JS/swiper-bundle.min.js"></script>

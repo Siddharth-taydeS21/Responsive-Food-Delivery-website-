@@ -23,6 +23,7 @@
     --breakpoint-xs1: 350px;
     --breakpoint-xs2: 540px;
     --breakpoint-largeScreens: 1150px;
+    --breakpoint-2k: 2048px;
 }
 
 @layer base {
@@ -108,7 +109,7 @@
     /* ================ NAV REUSABLE CLASSES ================== */
 
     .nav_menu .nav_link {
-        @apply text-title-color font-semibold hover:text-first-color transition-colors duration-400;
+        @apply text-title-color font-semibold hover:text-first-color! transition-colors duration-400;
     }
 
     /* ================ HOME SECTION REUSABLE CLASSES ================== */
@@ -198,6 +199,49 @@
 
     .reviews_comment {
         @apply w-full justify-self-center text-center;
+    }
+
+    /* ================ MAP SECTION REUSABLE CLASSES ================== */
+    
+    .map_card{
+        @apply grid gap-y-4 max-h-[128px];
+    }
+
+    .map_title{
+        @apply flex justify-center items-center gap-x-2 font-bold text-xl lg:text-2xl;
+    }
+
+    .map_title i{
+        @apply text-first-color;
+    }
+
+    .map_info{
+        @apply not-italic;
+    }
+
+    .map_area{
+        @apply relative w-full h-[320px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] lg:rounded-[6rem] justify-self-center rounded-[5rem] overflow-hidden;
+    }
+    
+    .map_area iframe{
+        @apply w-full h-full;
+    }
+    
+    .map_area:hover .map_img{
+        @apply -translate-x-full;
+    }
+    
+    /* ================ FOOTER SECTION REUSABLE CLASSES ================== */
+    .footer_title{
+        @apply text-title-color font-bold mb-4;
+    }
+
+    .footer_links{
+        @apply grid gap-y-2;
+    }
+
+    .footer_link{
+        @apply transition-colors duration-300 hover:text-title-color text-sm;
     }
 
 }
