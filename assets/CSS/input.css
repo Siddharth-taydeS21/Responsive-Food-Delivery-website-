@@ -22,7 +22,7 @@
     /* =================== CUSTOM BREAKPOINT =================== */
     --breakpoint-xs1: 350px;
     --breakpoint-xs2: 540px;
-    --breakpoint-lg2: 1150px;
+    --breakpoint-largeScreens: 1150px;
 }
 
 @layer base {
@@ -64,7 +64,7 @@
         @apply w-full px-8 pt-24 pb-20;
     }
 
-    header{
+    header {
         @apply w-full px-8 h-14 lg:h-22;
     }
 
@@ -95,14 +95,14 @@
     }
 
     .section__title {
-        @apply text-3xl mb-8 lg:text-5xl lg:mb-16;
+        @apply text-3xl lg:text-5xl lg:mb-16 font-bold mb-8;
     }
 
     .section__subtitle {
         /* font-size: var(--normal-font-size);
         color: var(--first-color);
         margin-bottom: .25rem; */
-        @apply text-lg text-first-color mb-[.25rem] lg:text-2xl lg:mb-6;
+        @apply text-first-color text-lg mb-[.25rem] lg:text-2xl lg:mb-6 font-bold;
     }
 
     /* ================ NAV REUSABLE CLASSES ================== */
@@ -113,22 +113,145 @@
 
     /* ================ HOME SECTION REUSABLE CLASSES ================== */
 
-    .social_link i{
-        @apply grid justify-center items-center size-10 text-2xl text-black bg-white rounded-lg shadow-lg transition-all duration-400 hover:bg-first-color hover:shadow-first-color-alt lg:size-13 lg:text-3xl;
+    .social_link i {
+        @apply grid justify-center items-center size-10 text-2xl text-black bg-white rounded-lg shadow-lg transition-all duration-400 hover:bg-first-color hover:shadow-first-color-alt lg:size-13 lg:text-3xl xl:text-4xl;
     }
 
     /* ================ SERVICES SECTION REUSABLE CLASSES ================== */
 
-    .service_card{
+    .service_card {
         @apply text-center;
     }
 
-    .service_img{
+    .service_img {
         @apply w-[150px] justify-self-center mb-5 lg:w-[200px];
     }
 
-    .service_title{
+    .service_title {
         @apply text-xl font-semibold mb-3 lg:text-2xl;
     }
 
-} 
+    /* ================ MENU SECTION REUSABLE CLASSES ================== */
+    .menu_name {
+        @apply font-bold text-black lg:text-xl;
+    }
+
+    .menu_button i,
+    .menu_price {
+        @apply text-black font-bold;
+    }
+
+    .menu_price {
+        @apply text-first-color lg:text-xl;
+    }
+
+    .menu_amount {
+        @apply text-sm my-[.25rem_.5rem];
+    }
+
+    .menu_button {
+        @apply size-[32px] bg-first-color rounded-xl absolute bottom-4 right-4 text-2xl lg:bottom-6 lg:right-6 lg:text-3xl lg:size-[42px];
+    }
+
+    .menu_card {
+        @apply bg-container-color p-[1rem_1rem_.5rem] rounded-2xl shadow-md grid gap-y-4 transition-colors duration-400 relative lg:p-[1.5rem_1.5rem_1.7rem];
+    }
+
+    .menu_card:hover .menu_img {
+        @apply -translate-y-1;
+
+    }
+
+    .menu_img {
+        @apply w-[100px] justify-self-center transition-transform duration-400 lg:w-[160px] xl:w-[200px];
+    }
+
+    /* ================ REVIEWS SECTION REUSABLE CLASSES ================== */
+    .review_card {
+        @apply grid gap-y-6 pb-26 xl:pb-34;
+    }
+
+    .reviews_profile {
+        @apply flex justify-center items-center gap-x-3 lg:justify-start lg:gap-x-6;
+    }
+
+    .reviews_photo {
+        @apply w-[90px] rounded-[50%] border-2 border-first-color xl:w-[100px];
+    }
+
+    .reviews_data {
+        @apply grid gap-y-1 xl:gap-y-3;
+    }
+
+    .review_name,
+    .reviews_numbers {
+        @apply text-title-color font-bold lg:text-xl;
+    }
+
+    .reviews_ratings {
+        @apply flex gap-x-2;
+    }
+
+    .reviews_stars i {
+        @apply text-first-color;
+    }
+
+    .reviews_comment {
+        @apply w-full justify-self-center text-center;
+    }
+
+}
+
+/* ====================== VANILLA CSS FOR SWIPER ELEMENTS ========================= */
+
+.reviews .swiper-slide {
+    display: grid;
+    justify-content: start !important;
+}
+
+.reviews .swiper-navigation-icon {
+    display: none;
+}
+
+.reviews :is(.swiper-button-next, .swiper-button-prev) {
+    top: initial !important;
+    bottom: 1rem !important;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: .5rem;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px hsla(45, 50%, 8%, .1);
+    transition: all .4s;
+}
+
+.reviews :is(.swiper-button-next, .swiper-button-prev):hover {
+    background-color: var(--color-first-color);
+    box-shadow: hsla(45, 100%, 50%, .3);
+}
+
+.swiper-button-prev {
+    left: calc(50% - 3rem) !important;
+}
+
+.swiper-button-next {
+    right: calc(50% - 3rem) !important;
+}
+
+/* =========== RESPONSIVE CSS FOR SWIPER ELEMENTS =========== */
+@media (width >= 1024px) {
+    .reviews :is(.swiper-button-next, .swiper-button-prev) {
+        width: 50px;
+        height: 50px;
+    }
+
+    .swiper-button-prev {
+        left: 1px !important;
+    }
+
+    .swiper-button-next {
+        right: calc(85% - 3rem) !important;
+    }
+}
